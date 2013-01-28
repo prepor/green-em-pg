@@ -15,7 +15,16 @@ spec = Gem::Specification.new do |s|
 
   # = MANIFEST =
   s.files = %w[
-
+    Gemfile
+    Gemfile.lock
+    README.md
+    Rakefile
+    green-em-pg.gemspec
+    lib/green-em/pg.rb
+    lib/green-em/pg/sequel.rb
+    spec/green-em/pg/sequel_spec.rb
+    spec/green-em/pg_spec.rb
+    spec/spec_helper.rb
   ]
   # = MANIFEST =
 end
