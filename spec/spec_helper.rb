@@ -14,9 +14,9 @@ logger = Logger.new nil
 DB_CONFIG = {
   host: "localhost",
   port: 5432,
-  dbname: "petr",
-  user: "petr",
-  password: "petr_passwd",
+  dbname: "test",
+  user: "postgres",
+  password: "postgres",
 }
 
 EM::PG.logger = logger
