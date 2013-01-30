@@ -12,7 +12,7 @@ class Green
           attr_accessor :pool
           def initialize(db, opts = {})
             super
-            @pool = Green::ConnectionPool.new size: opts[:max_connection] || DEFAULT_SIZE,
+            @pool = Green::ConnectionPool.new size: opts[:max_connections] || DEFAULT_SIZE,
                                               disconnect_class: ::Sequel::DatabaseDisconnectError do
               make_new(DEFAULT_SERVER)
             end
