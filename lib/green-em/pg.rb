@@ -6,10 +6,7 @@ class Green
       VERSION = "0.1.0"
       def self.new(*args)
         Green.hub # ensure started green hub
-        db = allocate
-        db.instance_eval do
-          initialize(*args)
-        end
+        db = super(*args)
         Green::EM.sync db
         db
       end

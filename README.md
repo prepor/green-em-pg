@@ -13,13 +13,15 @@ gem "green-em-pg"
 ```ruby
 require "green-em/pg"
 
+ENV["GREEN_HUB"] = "EM"
+
 db = Green::EM::PG.new host: "localhost",
   port: 5432,
   dbname: "test",
   user: "postgres",
   password: "postgres"
   
-res = db.send_qeury "select * from test"
+res = db.send_query "select * from test"
 
 puts res.inspect
 ```

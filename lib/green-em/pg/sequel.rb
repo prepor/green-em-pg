@@ -38,6 +38,8 @@ class Green
 
         def_delegators :@pg, :status, :escape_string, :escape_bytea
 
+        CONNECTION_OK = ::PG::CONNECTION_OK
+
         class << self
           alias :connect :new
         end
