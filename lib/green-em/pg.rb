@@ -3,7 +3,7 @@ require 'em/pg'
 class Green
   module EM
     class PG < ::EM::PG
-      VERSION = "0.1.0"
+      VERSION = "0.1.1"
       def self.new(*args)
         Green.hub # ensure started green hub
         db = allocate
