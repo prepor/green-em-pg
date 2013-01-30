@@ -20,7 +20,7 @@ GEM
     debugger-linecache (1.1.2)
       debugger-ruby_core_source (>= 1.1.1)
     debugger-ruby_core_source (1.1.7)
-    em-pg (0.1.1)
+    em-pg (0.1.2)
       eventmachine (>= 0.12)
       pg (>= 0.14)
     eventmachine (1.0.0)

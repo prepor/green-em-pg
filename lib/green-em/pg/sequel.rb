@@ -38,6 +38,8 @@ class Green
 
         def_delegators :@pg, :status, :escape_string, :escape_bytea
 
+        CONNECTION_OK = ::PG::CONNECTION_OK
+
         class << self
           alias :connect :new
         end
@@ -54,6 +56,10 @@ class Green
         # alias :prepare :send_prepare
         # alias :exec_prepared :send_query_prepared
         # alias :finish :close
+
+        def block
+          true
+        end
 
         [:get_copy_data, :put_copy_data, :put_copy_end, :get_result, :wait_for_notify].each do |m|
           define_method(m) do |*args|
